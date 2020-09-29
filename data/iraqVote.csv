@@ -1,0 +1,101 @@
+,y,state.abb,name,rep,state.name,gorevote
+0,1,AL,SESSIONS (R AL),True,Alabama,41.59
+1,1,AL,SHELBY (R AL),True,Alabama,41.59
+2,1,AK,MURKOWSKI (R AK),True,Alaska,27.67
+3,1,AK,STEVENS (R AK),True,Alaska,27.67
+4,1,AZ,KYL (R AZ),True,Arizona,44.67
+5,1,AZ,MCCAIN (R AZ),True,Arizona,44.67
+6,1,AR,HUTCHINSON (R AR),True,Arkansas,45.86
+7,1,AR,LINCOLN (D AR),False,Arkansas,45.86
+8,0,CA,BOXER (D CA),False,California,53.45
+9,1,CA,FEINSTEIN (D CA),False,California,53.45
+10,1,CO,ALLARD (R CO),True,Colorado,42.39
+11,1,CO,CAMPBELL (R CO),True,Colorado,42.39
+12,1,CT,DODD (D CT),False,Connecticut,55.91
+13,1,CT,LIEBERMAN (D CT),False,Connecticut,55.91
+14,1,DE,BIDEN (D DE),False,Delaware,54.96
+15,1,DE,CARPER (D DE),False,Delaware,54.96
+16,0,FL,GRAHAM (D FL),False,Florida,48.84
+17,1,FL,NELSON (D FL),False,Florida,48.84
+18,1,GA,CLELAND (D GA),False,Georgia,42.98
+19,1,GA,MILLER (D GA),False,Georgia,42.98
+20,0,HI,AKAKA (D HI),False,Hawaii,55.79
+21,0,HI,INOUYE (D HI),False,Hawaii,55.79
+22,1,ID,CRAIG (R ID),True,Idaho,27.64
+23,1,ID,CRAPO (R ID),True,Idaho,27.64
+24,0,IL,DURBIN (D IL),False,Illinois,54.6
+25,1,IL,FITZGERALD (R IL),True,Illinois,54.6
+26,1,IN,BAYH (D IN),False,Indiana,41.01
+27,1,IN,LUGAR (R IN),True,Indiana,41.01
+28,1,IA,GRASSLEY (R IA),True,Iowa,48.54
+29,1,IA,HARKIN (D IA),False,Iowa,48.54
+30,1,KS,BROWNBACK (R KS),True,Kansas,37.24
+31,1,KS,ROBERTS (R KS),True,Kansas,37.24
+32,1,KY,BUNNING (R KY),True,Kentucky,41.37
+33,1,KY,MCCONNELL (R KY),True,Kentucky,41.37
+34,1,LA,BREAUX (D LA),False,Louisiana,44.88
+35,1,LA,LANDRIEU (D LA),False,Louisiana,44.88
+36,1,ME,COLLINS (R ME),True,Maine,49.09
+37,1,ME,SNOWE (R ME),True,Maine,49.09
+38,0,MD,MIKULSKI (D MD),False,Maryland,56.57
+39,0,MD,SARBANES (D MD),False,Maryland,56.57
+40,0,MA,KENNEDY (D MA),False,Massachusetts,59.8
+41,1,MA,KERRY (D MA),False,Massachusetts,59.8
+42,0,MI,STABENOW (D MI),False,Michigan,51.28
+43,0,MI,LEVIN (D MI),False,Michigan,51.28
+44,0,MN,DAYTON (D MN),False,Minnesota,47.91
+45,0,MN,WELLSTONE (D MN),False,Minnesota,47.91
+46,1,MS,COCHRAN (R MS),True,Mississippi,40.7
+47,1,MS,LOTT (R MS),True,Mississippi,40.7
+48,1,MO,CARNAHAN (D MO),False,Missouri,47.08
+49,1,MO,BOND (R MO),True,Missouri,47.08
+50,1,MT,BAUCUS (D MT),False,Montana,33.36
+51,1,MT,BURNS (R MT),True,Montana,33.36
+52,1,NE,HAGEL (R NE),True,Nebraska,33.25
+53,1,NE,NELSON (D NE),False,Nebraska,33.25
+54,1,NV,ENSIGN (R NV),True,Nevada,45.98
+55,1,NV,REID (D NV),False,Nevada,45.98
+56,1,NH,GREGG (R NH),True,New Hampshire,46.8
+57,1,NH,SMITH (R NH),True,New Hampshire,46.8
+58,0,NJ,CORZINE (D NJ),False,New Jersey,56.13
+59,1,NJ,TORRICELLI (D NJ),False,New Jersey,56.13
+60,0,NM,BINGAMAN (D NM),False,New Mexico,47.91
+61,1,NM,DOMENICI (R NM),True,New Mexico,47.91
+62,1,NY,CLINTON (D NY),False,New York,60.21
+63,1,NY,SCHUMER (D NY),False,New York,60.21
+64,1,NC,EDWARDS (D NC),False,North Carolina,43.2
+65,1,NC,HELMS (R NC),True,North Carolina,43.2
+66,0,ND,CONRAD (D ND),False,North Dakota,33.05
+67,1,ND,DORGAN (D ND),False,North Dakota,33.05
+68,1,OH,DEWINE (R OH),True,Ohio,46.46
+69,1,OH,VOINOVICH (R OH),True,Ohio,46.46
+70,1,OK,INHOFE (R OK),True,Oklahoma,38.43
+71,1,OK,NICKLES (R OK),True,Oklahoma,38.43
+72,1,OR,SMITH (R OR),True,Oregon,46.96
+73,0,OR,WYDEN (D OR),False,Oregon,46.96
+74,1,PA,SANTORUM (R PA),True,Pennsylvania,50.6
+75,1,PA,SPECTER (R PA),True,Pennsylvania,50.6
+76,0,RI,CHAFEE (R RI),True,Rhode Island,60.99
+77,0,RI,REED (D RI),False,Rhode Island,60.99
+78,1,SC,HOLLINGS (D SC),False,South Carolina,40.91
+79,1,SC,THURMOND (R SC),True,South Carolina,40.91
+80,1,SD,DASCHLE (D SD),False,South Dakota,37.56
+81,1,SD,JOHNSON (D SD),False,South Dakota,37.56
+82,1,TN,FRIST (R TN),True,Tennessee,47.28
+83,1,TN,THOMPSON (R TN),True,Tennessee,47.28
+84,1,TX,GRAMM (R TX),True,Texas,37.98
+85,1,TX,HUTCHISON (R TX),True,Texas,37.98
+86,1,UT,BENNETT (R UT),True,Utah,26.34
+87,1,UT,HATCH (R UT),True,Utah,26.34
+88,0,VT,JEFFORDS (Indep VT),False,Vermont,50.63
+89,0,VT,LEAHY (D VT),False,Vermont,50.63
+90,1,VA,ALLEN (R VA),True,Virginia,44.44
+91,1,VA,WARNER (R VA),True,Virginia,44.44
+92,1,WA,CANTWELL (D WA),False,Washington,50.13
+93,0,WA,MURRAY (D WA),False,Washington,50.13
+94,0,WV,BYRD (D WV),False,West Virginia,45.59
+95,1,WV,ROCKEFELLER (D WV),False,West Virginia,45.59
+96,0,WI,FEINGOLD (D WI),False,Wisconsin,47.83
+97,1,WI,KOHL (D WI),False,Wisconsin,47.83
+98,1,WY,ENZI (R WY),True,Wyoming,27.7
+99,1,WY,THOMAS (R WY),True,Wyoming,27.7

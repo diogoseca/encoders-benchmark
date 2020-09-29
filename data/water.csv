@@ -1,0 +1,62 @@
+,location,town,mortality,hardness
+0,South,Bath,1247,105
+1,North,Birkenhead,1668,17
+2,South,Birmingham,1466,5
+3,North,Blackburn,1800,14
+4,North,Blackpool,1609,18
+5,North,Bolton,1558,10
+6,North,Bootle,1807,15
+7,South,Bournemouth,1299,78
+8,North,Bradford,1637,10
+9,South,Brighton,1359,84
+10,South,Bristol,1392,73
+11,North,Burnley,1755,12
+12,South,Cardiff,1519,21
+13,South,Coventry,1307,78
+14,South,Croydon,1254,96
+15,North,Darlington,1491,20
+16,North,Derby,1555,39
+17,North,Doncaster,1428,39
+18,South,East Ham,1318,122
+19,South,Exeter,1260,21
+20,North,Gateshead,1723,44
+21,North,Grimsby,1379,94
+22,North,Halifax,1742,8
+23,North,Huddersfield,1574,9
+24,North,Hull,1569,91
+25,South,Ipswich,1096,138
+26,North,Leeds,1591,16
+27,South,Leicester,1402,37
+28,North,Liverpool,1772,15
+29,North,Manchester,1828,8
+30,North,Middlesbrough,1704,26
+31,North,Newcastle,1702,44
+32,South,Newport,1581,14
+33,South,Northampton,1309,59
+34,South,Norwich,1259,133
+35,North,Nottingham,1427,27
+36,North,Oldham,1724,6
+37,South,Oxford,1175,107
+38,South,Plymouth,1486,5
+39,South,Portsmouth,1456,90
+40,North,Preston,1696,6
+41,South,Reading,1236,101
+42,North,Rochdale,1711,13
+43,North,Rotherham,1444,14
+44,North,St Helens,1591,49
+45,North,Salford,1987,8
+46,North,Sheffield,1495,14
+47,South,Southampton,1369,68
+48,South,Southend,1257,50
+49,North,Southport,1587,75
+50,North,South Shields,1713,71
+51,North,Stockport,1557,13
+52,North,Stoke,1640,57
+53,North,Sunderland,1709,71
+54,South,Swansea,1625,13
+55,North,Wallasey,1625,20
+56,South,Walsall,1527,60
+57,South,West Bromwich,1627,53
+58,South,West Ham,1486,122
+59,South,Wolverhampton,1485,81
+60,North,York,1378,71

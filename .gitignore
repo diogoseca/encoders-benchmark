@@ -127,3 +127,15 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+misc/0. Comparison to Autoencoder.ipynb
+misc/0. Spotify Song Popularity.ipynb
+misc/1. Wine.ipynb
+misc/2. Spotify.ipynb
+misc/ce_tests.py
+misc/code examples.ipynb
+misc/dataset spotify.ipynb
+misc/evaluation_framework.ipynb
+misc/spotify.csv
+misc/winemag-data-130k-v2.csv
+misc/arff-datasets/arff-datasets-master.zip
+misc/arff-datasets/source.txt

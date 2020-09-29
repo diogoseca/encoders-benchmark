@@ -1,0 +1,4 @@
+from measure import measure_encoder
+from category_encoders import BackwardDifferenceEncoder
+
+measure_encoder(BackwardDifferenceEncoder, save_results=True)
