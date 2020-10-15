@@ -15,6 +15,8 @@ from time import process_time
 from memory_profiler import memory_usage
 from pathlib import Path
 
+np.random.seed(7)
+
 
 ##################################################################
 ########################### DATASETS #############################
@@ -65,9 +67,9 @@ columns_nominals = [
     ['genus','vore','order'], # msleep
     ['city'], # txhousing
     ['mfr','trim','bdy_style','drivetrain','trsmn','ctry_origin'], # gtcars
-    ['location'], # water
-    ['IncParty','open','contested'], # ca2006
-    ['constituency','county',], # UKHouseOfCommons
+    ['location'], # water   
+    ['IncParty','open'], # ca2006
+    ['constituency','county'], # UKHouseOfCommons
     ['trt','sex'], # myeloid
     ['NAME','variable'], # us_rent_income
     ['league86', 'div86', 'team86', 'posit86', 'league87', 'team87'], # Baseball
@@ -84,14 +86,14 @@ columns_drop = [
     [], # txhousing
     ['model'], # gtcars
     ['town'], # water
-    ['district','IncName'], # ca2006
+    ['district','IncName', 'contested'], # ca2006
     [], # UKHouseOfCommons
     ['id'], # myeloid
     ['GEOID'], # us_rent_income
     ['name1','name2'], # Baseball   
     #['name'], # spotify
 ]
-datasets = [pd.read_csv('data/'+path+'.csv', index_col=0) for path in datasets_names]
+datasets = [pd.read_csv('data/'+path+'.csv', index_col=0)   for path in datasets_names]
 datasets = [dataset.drop(columns=drop_cols).dropna() for dataset,drop_cols in zip(datasets, columns_drop)]
 columns_numericals = [list(set(dataset.select_dtypes('number').columns) - set(nominals))
                       for dataset, nominals in zip(datasets, columns_nominals)]
@@ -171,12 +173,14 @@ def measure_encoder(encoder_class, encoder_name=None, save_results=False,
             # apply the encoder with profiling of time and memory
             start_time = process_time()
             memory, (X_train, X_test) = memory_usage(
-                (apply_encoder, (nominal_cols, X_train, X_test, y_train), {}), include_children=True, retval=True
+                (apply_encoder, (nominal_cols, X_train, X_test, y_train), {}), 
+                include_children=True, retval=True, interval=.1, timeout=None
             )
-
+            
             # save profiling results of this validation fold
             max_ram[name] += [max(memory) - min(memory)]
             cpu_time[name] += [process_time() - start_time]
+            #print(str(memory)+' (max='+str(max_ram[name][-1])+')' )
 
             # measure the encoder on different models
             models_bar = tqdm(models, leave=False)
@@ -199,7 +203,7 @@ def measure_encoder(encoder_class, encoder_name=None, save_results=False,
     max_ram = {k: max(max_ram[k]) for k in max_ram}
     cpu_time = {k: max(cpu_time[k]) for k in cpu_time}
     profile = pd.DataFrame([[max_ram[d], cpu_time[d]] for d in datasets_names], 
-                           columns=['Max RAM ()', 'CPU time (s)'], index=datasets_names)
+                           columns=['Max RAM (MiB)', 'CPU time (s)'], index=datasets_names)
 
     # save results
     if save_results:

@@ -51,7 +51,7 @@ columns_nominals = [
     ['city'], # txhousing
     ['mfr','trim','bdy_style','drivetrain','trsmn','ctry_origin'], # gtcars
     ['location'], # water
-    ['IncParty','open','contested'], # ca2006
+    ['IncParty','open'], # ca2006
     ['constituency','county',], # UKHouseOfCommons
     ['trt','sex'], # myeloid
     ['NAME','variable'], # us_rent_income
@@ -69,7 +69,7 @@ columns_drop = [
     [], # txhousing
     ['model'], # gtcars
     ['town'], # water
-    ['district','IncName'], # ca2006
+    ['district','IncName','contested'], # ca2006
     [], # UKHouseOfCommons
     ['id'], # myeloid
     ['GEOID'], # us_rent_income

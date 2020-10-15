@@ -19,41 +19,57 @@ for name in encoders_names:
     encoder_metrics['Encoder'] = name
     metrics.append(encoder_metrics)
 metrics = pd.concat(metrics)
+metrics.Encoder = metrics.Encoder.str.replace('Encoder','')
+metrics.LearningAlgorithm.replace({
+    'ElasticNet':'EN',
+    'GradientBoostingRegressor':'GBT',
+    'KNeighborsRegressor':'KNN',
+    'MLPRegressor':'NN-1L',
+    'MLPRegressor2':'NN-2L',
+    'RandomForestRegressor':'RF',
+    'SVR':'SVM',
+}, inplace=True)
 metrics = metrics.set_index(['Encoder', 'Dataset', 'LearningAlgorithm', 'Metric']).iloc[:,0]
 metrics = metrics.str.replace('\s.+', '', regex=True).astype(float)
 metrics = metrics.unstack(level='Dataset')
-metrics.columns.name = 'DATASETS:'
 rmse = metrics.xs('RMSE', level='Metric')
 interquartile_range = lambda df: df.quantile(.75) - df.quantile(.25)
 dist_to_best_scaled = lambda df: (df - df.min()) / interquartile_range(df)
 scores = dist_to_best_scaled(rmse)
+scores.to_csv('results/scores.csv')
+scores
 
-
-#%% BEST GENERAL-PURPOSE {MODEL+ENCODER}
-# E.g.:						 	dataset1	datasetN 	Score*
-#			model 1 encoder 1	mean		mean 		score
-#					encoder N	mean		mean 		score
-#			model N encoder 1	mean		mean 		score
-#					encoder N	mean		mean 		score
-# 
-best_models_encoders = scores.copy()
-best_models_encoders['MeanScore'] = scores.mean(axis=1)
-best_models_encoders.sort_values('MeanScore', inplace=True)
-best_models_encoders.to_csv('results/best-models-encoders.csv')
-best_models_encoders
     
 
-#%% BEST GENERAL-PURPOSE ENCODER
+#%% BEST ENCODER PER ALGORITHM
+# E.g.:
+#						algorithm1	algorithmN 	algorithmMean*
+#			encoder1	mean		mean 		mean
+#			encoder2	mean		mean 		mean
+#
+encoders_algorithms = scores.mean(axis=1).unstack('LearningAlgorithm').rename_axis(None, axis=0)
+encoders_algorithms['MeanScore'] = encoders_algorithms.mean(axis=1)
+encoders_algorithms.sort_values('MeanScore', inplace=True)
+encoders_algorithms = encoders_algorithms.round(4)
+encoders_algorithms.to_csv('results/encoders-algorithms.csv')
+encoders_algorithms.to_latex('results/encoders-algorithms.tex')
+encoders_algorithms
+    
+
+#%% BEST ENCODER PER DATASET
 # E.g.:
 #						dataset1	datasetN 	datasetMean*
 #			encoder1	mean		mean 		mean
 #			encoder2	mean		mean 		mean
 #
-best_encoders = best_models_encoders['MeanScore'].unstack('LearningAlgorithm').rename_axis(None, axis=0)
-best_encoders['MeanScore'] = best_encoders.mean(axis=1)
-best_encoders.sort_values('MeanScore', inplace=True)
-best_encoders.to_csv('results/best-encoders.csv')
-best_encoders
+encoders_datasets = scores.stack().unstack('LearningAlgorithm').mean(axis=1)
+encoders_datasets = encoders_datasets.unstack('Dataset').rename_axis(None, axis=0)
+encoders_datasets['MeanScore'] = encoders_datasets.mean(axis=1)
+encoders_datasets.sort_values('MeanScore', inplace=True)
+encoders_datasets = encoders_datasets.round(4)
+encoders_datasets.to_csv('results/encoders-datasets.csv')
+encoders_datasets.to_latex('results/encoders-datasets.tex')
+encoders_datasets
 
 
 # %%
